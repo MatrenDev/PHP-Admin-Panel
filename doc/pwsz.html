@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pl"> 
+<head>
+    <title>Panel zarządzania - PWSZ</title>
+    
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Dokumentacja techniczna panelu."> 
+    <link rel="shortcut icon" href="favicon.ico"> 
+    
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome JS-->
+    <script defer src="assets/fontawesome/js/all.min.js"></script>
+	
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.2/styles/atom-one-dark.min.css">
+
+    <!-- Theme CSS -->  
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
+
+</head> 
+
+<body class="docs-page">    
+    <header class="header fixed-top">	    
+        <div class="branding docs-branding">
+            <div class="container-fluid position-relative py-2">
+                <div class="docs-logo-wrapper">
+					<button id="docs-sidebar-toggler" class="docs-sidebar-toggler docs-sidebar-visible mr-2 d-xl-none" type="button">
+	                    <span></span>
+	                    <span></span>
+	                    <span></span>
+	                </button>
+	                <div class="site-logo"><a class="navbar-brand" href="index.html"><span class="logo-text"><span class="text-alt">PWSZ - Chełm</span></span></a></div>    
+                </div>
+	            <div class="docs-top-utilities d-flex justify-content-end align-items-center">
+	                <div class="top-search-box d-none d-lg-flex">
+							<a href="#">Wyjście (dowolność linku) &nbsp;&nbsp;&nbsp;</a>
+
+	                </div>
+	
+	            </div>
+            </div>
+        </div>
+    </header>
+    
+    <div class="docs-wrapper">
+	    <div id="docs-sidebar" class="docs-sidebar">
+		    <div class="top-search-box d-lg-none p-3">
+            </div>
+		    <nav id="docs-nav" class="docs-nav navbar">
+			    <ul class="section-items list-unstyled nav flex-column pb-3">
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-1"><span class="theme-icon-holder mr-2"><i class="fas fa-lightbulb"></i></span>Projekt</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-1">Baza danych</a></li>
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-2"><span class="theme-icon-holder mr-2"><i class="fas fa-tools"></i></span>Zarządzanie</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-1">Dodawanie sprzętu</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-2">Edycja i usuwanie sprzętu</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-3">Tworzenie użytkowników</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-2-4">Nadawanie uprawnień</a></li>
+
+			    </ul>
+
+		    </nav>
+	    </div>
+	    <div class="docs-content">
+		    <div class="container">
+				<article class="docs-article" id="section-1">
+				    <header class="docs-header">
+					    <h1 class="docs-heading">Projekt</h1>
+					    <section class="docs-intro">
+						    <p>Panel stworzony dla Państwowej Wyższej Szkoły Zawodowej w Chełmie w celu przechowywania danych dot. sprzętu w poszczególnych salach, a także informacji przedstawiających wszelkie zmiany techniczne.</p>
+						</section>
+				    </header>
+				     <section class="docs-section" id="item-1-1">
+						<h2 class="section-heading">Baza danych</h2>
+						<h5 class="pt-3"><i class="fas fa-question-circle mr-1"></i>Struktura - items</h5>
+						<p>id - mediumint(8),<br>nazwa - limit 25 znaków,<br>historia - limit 500 znaków,<br>pomieszczenie - limit 20 znaków,<br>data - typ date,<br>created_by - przechowuje id twórcy,<br>created_at - data stworzenia,<br>updated by - ID osoby aktualizującej,<br>updated at - ostatnia aktualizacja.</p>
+						<h5 class="pt-3"><i class="fas fa-question-circle mr-1"></i>Struktura - admin_accounts</h5>
+						<p>id - mediumint(8),<br>user_name - limit 50 znaków,<br>password - limit 255 znaków,<br>series_id - limit 60 znaków,<br>token - 255 znaków,<br>expires - data,<br>admin_type - limit 10 znaków.</p>
+					</section>
+					
+					
+			    </article>
+					
+			    <article class="docs-article" id="section-2">
+				    <header class="docs-header">
+					    <h1 class="docs-heading">Zarządzanie</h1>
+					    <section class="docs-intro">
+						    <p>Opis sposobu zarządzania panelem.</p>
+						</section>
+				    </header>
+				    <section class="docs-section" id="item-2-1">
+						<h2 class="section-heading">Dodawanie sprzętu</h2>
+						<p>Sprzęt -> Lista -> Dodaj nowe -> wprowadzenie odpowiednich wartości -> zapis.</p>
+					</section>
+					<section class="docs-section" id="item-2-2">
+						<h2 class="section-heading">Edycja i usuwanie sprzętu</h2>
+						<p>Sprzęt -> Lista -> niebieska ikonka w zarządzaniu.</p>
+					</section>
+					<section class="docs-section" id="item-2-3">
+						<h2 class="section-heading">Tworzenie użytkowników</h2>
+						<p>Administracja -> Dodaj -> Wprowadzenie Loginu & Hasła -> wybór typu konta -> zapis.</p>
+					</section>
+					<section class="docs-section" id="item-2-4">
+						<h2 class="section-heading">Nadawanie uprawnień</h2>
+						<p>Administracja -> niebieska ikona -> edycja wedle uznania. Usunięcie przy użyciu czerwonej ikony.</p>
+					</section>
+
+					
+			    </article>
+			    
+			
+			    <footer class="footer">
+				    <div class="container text-center py-5">
+				       
+				        <ul class="social-list list-unstyled pt-4 mb-0">
+
+				        </ul>
+				    </div>
+					
+			    </footer>
+				
+		    </div> 
+	    </div>
+    </div>
+    
+   
+       
+    <!-- Javascript -->          
+    <script src="assets/plugins/jquery-3.4.1.min.js"></script>
+    <script src="assets/plugins/popper.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>  
+    
+    
+    <!-- Page Specific JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+    <script src="assets/js/highlight-custom.js"></script> 
+    <script src="assets/plugins/jquery.scrollTo.min.js"></script>
+    <script src="assets/plugins/lightbox/dist/ekko-lightbox.min.js"></script> 
+    <script src="assets/js/docs.js"></script> 
+
+</body>
+</html> 
+
